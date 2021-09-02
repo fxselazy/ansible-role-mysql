@@ -3,12 +3,12 @@
 # or sudo access
 mysql_user_home: /root
 mysql_user_name: root
-mysql_user_password: root
+mysql_user_password: sercet
 
 # The default root user installed by mysql - almost always root
 mysql_root_home: /root
 mysql_root_username: root
-mysql_root_password: root
+mysql_root_password: sercet
 
 # Set this to `true` to forcibly update the root password.
 mysql_root_password_update: false
@@ -113,7 +113,15 @@ mysql_databases: []
 #     replicate: 1
 
 # Users.
-mysql_users: []
+mysql_users: 
+  - name: dbteam
+    host: "%"
+    password: icsdbteam26
+    priv: "*.*:USAGE"
+  - name: phpmyadmin
+    host: "%"
+    password: icsdbgui26
+    priv: "*.*:USAGE"
 #   - name: example
 #     host: 127.0.0.1
 #     password: secret
